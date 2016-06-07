@@ -1,0 +1,30 @@
+html * {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+h1, p {
+  font-family: 'Shadows Into Light', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 20px;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 740px;
+  min-height: 100%;
+  padding: 0 5%;
+}

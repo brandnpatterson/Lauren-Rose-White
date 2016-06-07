@@ -1,0 +1,28 @@
+header {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 5%;
+}
+
+.left a {
+  display: inline-block;
+    float: left;
+    padding: 0 10px;
+  }
+
+.right a {
+  clear: right;
+  float: right;
+  padding-right: 10px;
+}
+
+.current h1, .nav-sub, h1:hover, p:hover {
+  font-weight: bold;
+}

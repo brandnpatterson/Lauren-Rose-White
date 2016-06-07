@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+
+  .dropbtn {
+    visibility: visible;
+  }
+  .left {
+    visibility: hidden;
+    position: absolute;
+    color: white;
+    clear: left;
+    float: left;
+  }
+}
