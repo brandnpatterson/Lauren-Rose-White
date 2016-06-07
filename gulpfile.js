@@ -4,13 +4,13 @@ var gulp = require('gulp');
     watch = require('gulp-watch');
 
 gulp.task('compress', function() {
-  gulp.src('src/*.js')
+  gulp.src('src/js/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('styles', function() {
-  gulp.src('sass/**/*.scss')
+  gulp.src('src/sass/**/*.scss')
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(gulp.dest('dist/css'));
 });
