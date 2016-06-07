@@ -18,3 +18,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function getSwitch() {
+  document.getElementById("switch").classList.toggle("fade", 500);
+}

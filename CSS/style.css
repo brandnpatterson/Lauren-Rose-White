@@ -45,7 +45,6 @@ img {
 p {
   font-size: 20px;
   max-width: 700px;
-  text-align: center;
 }
 
 #wrapper {
@@ -84,11 +83,7 @@ nav {
   padding: 5%;
 }
 
-.selected_2 h1, nav h1:hover, .selected_2 p, ul p:hover {
-  font-weight: bold;
-}
-
-#selected h1, nav h1:hover, #selected p, ul p:hover {
+#selected h1, nav h1:hover, ul p:hover, .selected_2 h1, nav h1:hover, .selected_2 p, ul p:hover, .current p {
   font-weight: bold;
 }
 
@@ -109,6 +104,13 @@ button {
   font-weight: bold;
 }
 
+#switch p {
+  clear: both;
+}
+
+#switch p:first {
+  float: left;
+}
 
 /************************************************************************
   GALLERY
@@ -125,14 +127,14 @@ button {
   text-align: center;
 }
 
-#gallery_2 li {
+.gallery_2 li {
   float: left;
   width: 45%;
   margin: 2.5%;
 }
 
-
-
+#nature {
+}
 
 /************************************************************************
   FOOTER
