@@ -6,7 +6,7 @@
   "main": "gulpfile.js",
   "license": "ISC",
   "url": "",
-  "homepage": "",
+  "homepage": "https://github.com/brandnpatterson/Lauren#readme",
   "private": true,
   "engines": {
     "node": ">=4"
@@ -62,5 +62,8 @@
       2,
       "single"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/brandnpatterson/Lauren/issues"
   }
 }
