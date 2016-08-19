@@ -1,2 +1,8 @@
-@import 'base/_index';
-@import 'layout/_index';
+@import "0-tools/_normalize";
+
+@import "1-basics/_basics";
+
+@import "3-layouts/_nav";
+@import "3-layouts/_sections";
+@import "3-layouts/_footer";
+@import "3-layouts/_media";
