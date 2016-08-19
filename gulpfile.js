@@ -14,7 +14,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 // Convert all sass files into minified css files
-gulp.task('styles', function() {
+gulp.task('styles', () => {
   gulp.src('app/styles/**/*.scss')
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(gulp.dest('app/styles'))
