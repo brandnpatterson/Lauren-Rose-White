@@ -1,7 +1,6 @@
 ### Basic ###
 .tmp
 dist
-node_modules
 
 # Created by https://www.gitignore.io/api/osx,node,sass
 
