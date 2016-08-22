@@ -1,10 +1,10 @@
-import babel from 'gulp-babel'
-import browserSync from 'browser-sync'
-import concat from 'gulp-concat'
-import del from 'del'
-import gulp from 'gulp'
-import load from 'gulp-load-plugins'
-import sass from 'gulp-sass'
+import        babel from 'gulp-babel'
+import  browserSync from 'browser-sync'
+import       concat from 'gulp-concat'
+import          del from 'del'
+import         gulp from 'gulp'
+import         load from 'gulp-load-plugins'
+import         sass from 'gulp-sass'
 
 const $ = load()
 const reload = browserSync.reload
@@ -17,7 +17,6 @@ gulp.task('styles', () => {
 })
 
 gulp.task('scripts', () => {
-  gulp.src('./app/scripts/main.js')
   gulp.src('./app/scripts/*.js')
   .pipe(concat('main.js'))
   .pipe(gulp.dest('./app/scripts'))
