@@ -1,9 +1,8 @@
 nav
-  display: -webkit-flex
-  -webkit-flex-direction: row
-  -webkit-justify-content: center
+  display: flex
   margin: 0 auto
   max-width: 1000px
+
   ul
     display: inline
     padding: 15px 15px
@@ -19,11 +18,7 @@ nav
 #nav-nature
   margin-left: 20px
 
-#nav-left li
-  display: inline-block
-  margin-right: 50px
-
-#nav-right li
+.nav-right li
   text-align: right
 
 #nav-people, #nav-nature
@@ -35,25 +30,5 @@ nav
 #nav-people:hover, #nav-nature:hover
   text-decoration: underline
 
-.dropbtn
-  background-color: #fff
-  border: none
-  color: white
-  cursor: pointer
-  height: 30px
-  margin-left: 10%
-  margin-top: 15%
-
 .nav-sub
   cursor: pointer
-
-.responsive
-  background-color: #f9f9f9
-  display: -webkit-flex
-  -webkit-flex-direction: column
-  justify-content: center
-  margin: 0 auto
-  padding-left: 10%
-  position: fixed
-  text-align: center
-  width: 100%

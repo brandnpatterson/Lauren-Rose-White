@@ -10,10 +10,10 @@
 
   navLeft.onclick = () => {
     let x = document.getElementById('nav-left')
-    if (x.className === 'left-default') {
+    if (x.className === 'nav-left') {
       x.className += 'responsive'
     } else {
-      x.className = 'left-default'
+      x.className = 'nav-left'
     }
   }
 })()

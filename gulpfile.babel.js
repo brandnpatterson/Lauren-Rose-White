@@ -1,4 +1,5 @@
 import      gulp from "gulp"
+import     babel from "gulp-babel"
 import    concat from "gulp-concat"
 import       del from "del"
 import      load from "gulp-load-plugins"
@@ -10,7 +11,7 @@ import      sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
-gulp.task('clean', del.bind(null, ['app/styles/*.css', 'app/js/main.min.js', 'app/js/**.min.js', 'dist'], {read: false}))
+gulp.task('clean', del.bind(null, ['app/styles/*.css', 'app/js/main.js', 'app/js/main.min.js', 'app/js/**.min.js', 'dist'], {read: false}))
 
 gulp.task('default', ['html', 'fonts', 'images'], () => {
   gulp.start('serve')
@@ -46,7 +47,7 @@ gulp.task('serve', () => {
     }
   })
 
-  gulp.watch(['app/*.html', 'app/styles/**/*.sass', 'app/js/*.min.js']).on('change', reload)
+  gulp.watch(['app/*.html', 'app/styles/**/*.sass', 'app/js/*.js']).on('change', reload)
   gulp.watch('app/styles/**/*.sass', ['styles'])
   gulp.watch('app/js/*.js', ['scripts'])
 })
@@ -55,7 +56,7 @@ gulp.task('serve:dist', () => {
   sync({
     notify: false,
     server: {
-      baseDir: 'app'
+      baseDir: 'dist'
     }
   })
 })
@@ -63,7 +64,8 @@ gulp.task('serve:dist', () => {
 gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(concat('main.js'))
-    .pipe($.uglify())
+    .pipe($.babel())
+    .pipe($.uglify().on('error', function(e){console.log(e);}))
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest('app/js'))
     .pipe(gulp.dest('dist/js'))
@@ -76,5 +78,4 @@ gulp.task('styles', () => {
   .pipe(prefix('last 2 versions'))
   .pipe(gulp.dest('app/styles'))
   .pipe(gulp.dest('dist/styles'))
-  .pipe(reload({stream: true}))
 })
