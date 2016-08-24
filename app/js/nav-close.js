@@ -2,6 +2,7 @@
 
 const       home = document.getElementById('home')
 const    dropbtn = document.getElementById('dropbtn')
+const     footer = document.getElementById('footer')
 const   navClose = document.getElementById('nav-close')
 const    navLeft = document.getElementById('nav-left')
 const   navRight = document.getElementById('nav-right')
@@ -28,6 +29,7 @@ const   navRight = document.getElementById('nav-right')
       x.id = 'nav-left'
       navRight.setAttribute('class', 'visible')
       dropbtn.setAttribute('class', 'visible')
+      footer.setAttribute('class', 'visible')
     }
   }
 })()
