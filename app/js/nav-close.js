@@ -15,9 +15,10 @@ const   navRight = document.getElementById('nav-right')
       x.id = 'responsive'
     } else {
       x.id = 'nav-left'
-      navRight.setAttribute('class', 'visible')
       home.setAttribute('class', 'visible')
       dropbtn.setAttribute('class', 'visible')
+      footer.setAttribute('class', 'visible')
+      navRight.setAttribute('class', 'visible')
     }
   }
 
@@ -27,9 +28,9 @@ const   navRight = document.getElementById('nav-right')
     let x = document.getElementById('responsive')
     if (x.id === 'responsive') {
       x.id = 'nav-left'
-      navRight.setAttribute('class', 'visible')
       dropbtn.setAttribute('class', 'visible')
       footer.setAttribute('class', 'visible')
+      navRight.setAttribute('class', 'visible')
     }
   }
 })()
