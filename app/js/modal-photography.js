@@ -35,8 +35,6 @@
   const                 palms = document.getElementById('palms')
   const               peacoat = document.getElementById('peacoat')
 
-  modalPhotography.className = "hidden"
-
   catBlue.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
