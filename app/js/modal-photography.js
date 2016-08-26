@@ -16,7 +16,7 @@
   const              lavendar = document.getElementById('lavendar')
   const      modalPhotography = document.getElementById('modal-photography')
   const          modalCatBlue = document.getElementById('modal-cat-blue')
-  const            modalClose = document.getElementsByClassName('modal-close')[0]
+  const       modalClosePhoto = document.getElementById('modal-close-photo')
   const           modalColors = document.getElementById('modal-colors')
   const      modalCatWhitePho = document.getElementById('modal-cat-white-photo')
   const          modalCatYawn = document.getElementById('modal-cat-yawn')
@@ -39,28 +39,28 @@
     footer.style.display = "none"
     modalPhotography.style.display = "block"
     modalCatBlue.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
   }
 
   catWhitePho.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
     modalCatWhitePho.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
   }
 
   catYawn.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
     modalCatYawn.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
 
   }
 
   colors.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalColors.style.display = "block"
 
   }
@@ -68,7 +68,7 @@
   dolphin.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalDolphin.style.display = "block"
 
   }
@@ -76,7 +76,7 @@
   drops.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalDrops.style.display = "block"
 
   }
@@ -84,58 +84,59 @@
   fields.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalFields.style.display = "block"
   }
 
   flowersDark.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalFlowersDark.style.display = "block"
   }
 
   flowerWhite.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalFlowerWhite.style.display = "block"
   }
 
   flowerYellow.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalFlowerYellow.style.display = "block"
   }
 
   guitar.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalGuitar.style.display = "block"
   }
 
   hand.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalHand.style.display = "block"
   }
 
   lavender.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalLavender.style.display = "block"
   }
 
-  modalClose.onclick = () => {
+  modalClosePhoto.onclick = () => {
     footer.style.display = "block"
     modalPhotography.style.display = "none"
     modalCatBlue.style.display = "none"
     modalCatWhitePho.style.display = "none"
     modalCatYawn.style.display = "none"
+    modalClosePhoto.style.display = "none"
     modalColors.style.display = "none"
     modalDolphin.style.display = "none"
     modalDrops.style.display = "none"
@@ -154,21 +155,21 @@
   palms.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalPalms.style.display = "block"
   }
 
   peacoat.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalPeacoat.style.display = "block"
   }
 
   waves.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"
-    modalClose.style.display = "block"
+    modalClosePhoto.style.display = "block"
     modalWaves.style.display = "block"
   }
 
