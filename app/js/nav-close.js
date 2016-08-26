@@ -12,13 +12,13 @@
   navClose.onclick = () => {
     let x = document.getElementById('responsive')
     if (x.id === 'nav-left') {
-      x.id = 'responsive'
+      x.id = "responsive"
     } else {
-      x.id = 'nav-left'
-      home.style.display = "block"
-      dropbtn.style.display = "block"
-      footer.style.display = "block"
-      navRight.style.display = "block"
+      x.id = "nav-left"
+      home.className = "visible"
+      dropbtn.className = "visible"
+      footer.className = "visible"
+      navRight.className = "visible"
     }
   }
 
@@ -27,10 +27,10 @@
   navLeft.onclick = () => {
     let x = document.getElementById('responsive')
     if (x.id === 'responsive') {
-      x.id = 'nav-left'
-      dropbtn.style.display = "block"
-      footer.style.display = "block"
-      navRight.style.display = "block"
+      x.id = "nav-left"
+      dropbtn.className = "visible"
+      footer.className = "visible"
+      navRight.className = "visible"
     }
   }
 })()

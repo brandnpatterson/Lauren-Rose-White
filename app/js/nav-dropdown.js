@@ -16,28 +16,28 @@
     // Give the following divs the class of visible
     if (x.id === 'nav-left') {
       x.id = 'responsive'
-      contact.style.display = "none"
-      footer.style.display = "none"
-      graphics.style.display = "none"
-      home.style.display = "none"
-      dropbtn.style.display = "none"
-      navRight.style.display = "none"
-      photography.style.display = "none"
-      printmaking.style.display = "none"
-      videos.style.display = "none"
+      contact.className = "hidden"
+      footer.className = "hidden"
+      graphics.className = "hidden"
+      home.className = "visible"
+      dropbtn.className = "hidden"
+      navRight.className = "hidden"
+      photography.className = "hidden"
+      printmaking.className = "hidden"
+      videos.className = "hidden"
 
     } else {
       // Give the following divs the class of visible
       x.id = 'nav-left'
-      contact.style.display = "block"
-      footer.style.display = "block"
-      graphics.style.display = "block"
-      home.style.display = "block"
-      dropbtn.style.display = "block"
-      navRight.style.display = "block"
-      photography.style.display = "block"
-      printmaking.style.display = "block"
-      videos.style.display = "block"
+      contact.className = "visible"
+      footer.className = "visible"
+      graphics.className = "visible"
+      home.className = "visible"
+      dropbtn.className = "visible"
+      navRight.className = "visible"
+      photography.className = "visible"
+      printmaking.className = "visible"
+      videos.className = "visible"
     }
   }
 })()
