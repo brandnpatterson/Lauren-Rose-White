@@ -54,22 +54,34 @@
           This is a Resume I built for a Web Developer
         </p>
         <a href="images/brandon-resume.pdf" download>
-          <img class="brandon-resume" src="images/brandon-resume.png" />
+          <img class="brandon-resume" src="images/brandon-resume.png" alt="brandon's resume" />
         </a>
       </div><!-- end graphics -->
 
       <div id="home">
         <ul class="gallery">
-          <li>
-            <a href="images/flowers.jpg" target="_blank"><img src="images/flowers.jpg" alt="white flowers"></a>
+          <li id="flowers">
+            <a href="#0"><img src="images/flowers.jpg" alt="white flowers"></a>
           </li>
-          <li>
-            <a href="images/leaf.jpg" target="_blank"><img src="images/leaf.jpg" alt="a single leaf"/></a>
+          <li id="leaf">
+            <a href="#0"><img src="images/leaf.jpg" alt="a single leaf"/></a>
           </li>
-          <li>
-            <a href="images/cat-white.jpg" target="_blank"><img src="images/cat-white.jpg" alt="a white fluffy cat"/></a>
+          <li id="cat-white-home">
+            <a href="#0"><img src="images/cat-white.jpg" alt="a white fluffy cat"/></a>
           </li>
-        </ul>
+        </ul><!-- end gallery -->
+
+        <div id="modal-home">
+          <div id="modal-flowers">
+            <img src="images/flowers.jpg" alt="white flowers">
+          </div>
+          <div id="modal-leaf">
+            <img src="images/leaf.jpg" alt="a single leaf"/>
+          </div>
+          <div id="modal-cat-white-home">
+            <img src="images/cat-white.jpg" alt="a white fluffy cat"/>
+          </div>
+        </div><!-- end modal-home -->
       </div><!-- end home -->
 
       <div id="photography" class="hidden">
@@ -88,8 +100,9 @@
           <li id="guitar"><a href="#0"><img src="images/guitar.jpg" alt="a girl playing guitar"/></a></li>
         </ul>
 
-        <div id="modal">
+        <div id="modal-photography">
           <span class="modal-close">x</span>
+          <!-- People Modal -->
           <div id="modal-peacoat">
             <img src="images/pea-coat.jpg" alt="a girl in a peacoat"/>
           </div>
@@ -99,25 +112,64 @@
           <div id="modal-guitar">
             <img src="images/guitar.jpg" alt="a girl playing guitar"/>
           </div>
-        </div>
-
+          <!-- Nature Modal -->
+          <div id="modal-flower-yellow">
+            <img src="images/flower-yellow.jpg" alt="a yellow flower"/>
+          </div>
+          <div id="modal-waves">
+            <img src="images/waves.jpg" alt="a bird at the beach at sunset"/>
+          </div>
+          <div id="modal-dolphin">
+            <img src="images/dolphin.jpg" alt="a dolphin jumping"/>
+          </div>
+          <div id="modal-fields">
+            <img src="images/fields.jpg" alt="a green field under blue skies"/>
+          </div>
+          <div id="modal-colors">
+            <img src="images/colors.jpg" alt="a lot of colorful flowers"/>
+          </div>
+          <div id="modal-flowers-dark">
+            <img src="images/flowers-dark.jpg" alt="flowers at night"/>
+          </div>
+          <div id="modal-cat-blue">
+            <img src="images/cat-blue-eyes.jpg" alt="a cat with blue eyes"/>
+          </div>
+          <div id="modal-drops">
+            <img src="images/drops.jpg" alt="tree with water drops on it"/>
+          </div>
+          <div id="modal-palms">
+            <img src="images/palms.jpg" alt="palm trees at sunset"/>
+          </div>
+          <div id="modal-cat-white-photo">
+            <img src="images/cat-white.jpg" alt="a white fluffy cat"/>
+          </div>
+          <div id="modal-cat-yawn">
+            <img src="images/cat-yawn.jpg" alt="a cat yawning"/>
+          </div>
+          <div id="modal-flower-white">
+            <img src="images/flower-white.jpg" alt="a white flower"/>
+          </div>
+          <div id="modal-lavender">
+            <img src="images/lavender.jpg" alt="purple flowers"/>
+          </div>
+        </div><!-- end modal-photography -->
 
         <ul id="nature" class="hidden">
-          <li><a href="images/flower-yellow.jpg" target="_blank"><img src="images/flower-yellow.jpg" alt="a yellow flower"/></a></li>
-          <li><a href="images/waves.jpg" target="_blank"><img src="images/waves.jpg" alt="a bird at the beach at sunset"/></a></li>
-          <li><a href="images/dolphin.jpg" target="_blank"><img src="images/dolphin.jpg" alt="a dolphin jumping"/></a></li>
-          <li><a href="images/fields.jpg" target="_blank"><img src="images/fields.jpg" alt="a green field under blue skies"/></a></li>
-          <li><a href="images/colors.jpg" target="_blank"><img src="images/colors.jpg" alt="a lot of colorful flowers"/></a></li>
-          <li><a href="images/flowers-dark.jpg" target="_blank"><img src="images/flowers-dark.jpg" alt="flowers at night"/></a></li>
-          <li><a href="images/cat-blue-eyes.jpg" target="_blank"><img src="images/cat-blue-eyes.jpg" alt="a cat with blue eyes"/></a></li>
-          <li><a href="images/drops.jpg" target="_blank"><img src="images/drops.jpg" alt="tree with water drops on it"/></a></li>
-          <li><a href="images/palms.jpg" target="_blank"><img src="images/palms.jpg" alt="palm trees at sunset"/></a></li>
-          <li><a href="images/cat-white.jpg" target="_blank"><img src="images/cat-white.jpg" alt="a white fluffy cat"/></a></li>
-          <li><a href="images/cat-yawn.jpg" target="_blank"><img src="images/cat-yawn.jpg" alt="a cat yawning"/></a></li>
-          <li><a href="images/flower-white.jpg" target="_blank"><img src="images/flower-white.jpg" alt="a white flower"/></a></li>
-          <li><a href="images/lavender.jpg" target="_blank"><img src="images/lavender.jpg" alt="purple flowers"/></a></li>
+          <li id="flower-yellow"><a href="#0"><img src="images/flower-yellow.jpg" alt="a yellow flower"/></a></li>
+          <li id="waves"><a href="#0"><img src="images/waves.jpg" alt="a bird at the beach at sunset"/></a></li>
+          <li id="dolphin"><a href="#0"><img src="images/dolphin.jpg" alt="a dolphin jumping"/></a></li>
+          <li id="fields"><a href="#0"><img src="images/fields.jpg" alt="a green field under blue skies"/></a></li>
+          <li id="colors"><a href="#0"><img src="images/colors.jpg" alt="a lot of colorful flowers"/></a></li>
+          <li id="flowers-dark"><a href="#0"><img src="images/flowers-dark.jpg" alt="flowers at night"/></a></li>
+          <li id="cat-blue"><a href="#0"><img src="images/cat-blue-eyes.jpg" alt="a cat with blue eyes"/></a></li>
+          <li id="drops"><a href="#0"><img src="images/drops.jpg" alt="tree with water drops on it"/></a></li>
+          <li id="palms"><a href="#0"><img src="images/palms.jpg" alt="palm trees at sunset"/></a></li>
+          <li id="cat-white-photo"><a href="#0"><img src="images/cat-white.jpg" alt="a white fluffy cat"/></a></li>
+          <li id="cat-yawn"><a href="#0"><img src="images/cat-yawn.jpg" alt="a cat yawning"/></a></li>
+          <li id="flower-white"><a href="#0"><img src="images/flower-white.jpg" alt="a white flower"/></a></li>
+          <li id="lavender"><a href="#0"><img src="images/lavender.jpg" alt="purple flowers"/></a></li>
         </ul>
-      </div><!-- end people -->
+      </div><!-- end nature -->
 
       <div id="printmaking" class="hidden">
         <ul id="gallery">

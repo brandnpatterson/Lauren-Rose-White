@@ -15,10 +15,10 @@
       x.id = 'responsive'
     } else {
       x.id = 'nav-left'
-      home.setAttribute('class', 'visible')
-      dropbtn.setAttribute('class', 'visible')
-      footer.setAttribute('class', 'visible')
-      navRight.setAttribute('class', 'visible')
+      home.style.display = "block"
+      dropbtn.style.display = "block"
+      footer.style.display = "block"
+      navRight.style.display = "block"
     }
   }
 
@@ -28,9 +28,9 @@
     let x = document.getElementById('responsive')
     if (x.id === 'responsive') {
       x.id = 'nav-left'
-      dropbtn.setAttribute('class', 'visible')
-      footer.setAttribute('class', 'visible')
-      navRight.setAttribute('class', 'visible')
+      dropbtn.style.display = "block"
+      footer.style.display = "block"
+      navRight.style.display = "block"
     }
   }
 })()

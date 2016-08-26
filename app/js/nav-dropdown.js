@@ -16,28 +16,28 @@
     // Give the following divs the class of visible
     if (x.id === 'nav-left') {
       x.id = 'responsive'
-      contact.setAttribute('class', 'hidden')
-      footer.setAttribute('class', 'hidden')
-      graphics.setAttribute('class', 'hidden')
-      home.setAttribute('class', 'hidden')
-      dropbtn.setAttribute('class', 'hidden')
-      navRight.setAttribute('class', 'hidden')
-      photography.setAttribute('class', 'hidden')
-      printmaking.setAttribute('class', 'hidden')
-      videos.setAttribute('class', 'hidden')
+      contact.style.display = "none"
+      footer.style.display = "none"
+      graphics.style.display = "none"
+      home.style.display = "none"
+      dropbtn.style.display = "none"
+      navRight.style.display = "none"
+      photography.style.display = "none"
+      printmaking.style.display = "none"
+      videos.style.display = "none"
 
     } else {
       // Give the following divs the class of visible
       x.id = 'nav-left'
-      contact.setAttribute('class', 'visible')
-      footer.setAttribute('class', 'visible')
-      graphics.setAttribute('class', 'visible')
-      home.setAttribute('class', 'visible')
-      dropbtn.setAttribute('class', 'visible')
-      navRight.setAttribute('class', 'visible')
-      photography.setAttribute('class', 'visible')
-      printmaking.setAttribute('class', 'visible')
-      videos.setAttribute('class', 'visible')
+      contact.style.display = "block"
+      footer.style.display = "block"
+      graphics.style.display = "block"
+      home.style.display = "block"
+      dropbtn.style.display = "block"
+      navRight.style.display = "block"
+      photography.style.display = "block"
+      printmaking.style.display = "block"
+      videos.style.display = "block"
     }
   }
 })()

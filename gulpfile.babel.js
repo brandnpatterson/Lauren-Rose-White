@@ -66,7 +66,7 @@ gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(concat('main.js'))
     .pipe($.babel())
-    .pipe($.uglify().on('error', function(e){console.log(e);}))
+    // .pipe($.uglify().on('error', function(e){console.log(e);}))
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest('app/js'))
     .pipe(gulp.dest('dist/js'))
