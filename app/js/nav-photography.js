@@ -20,9 +20,9 @@
 
   // When nav-nature is clicked, hide people and give nav-nature the class of underlined
   navNature.onclick = () => {
-      nature.className = "visible"
-      navNature.style.textDecoration = "underline"
-      navPeople.style.textDecoration = "none"
-      people.className = "hidden"
+    nature.className = "visible"
+    navNature.style.textDecoration = "underline"
+    navPeople.style.textDecoration = "none"
+    people.className = "hidden"
   }
 })()

@@ -4,6 +4,7 @@
   const        footer = document.getElementById('footer')
   const      graphics = document.getElementById('graphics')
   const       dropbtn = document.getElementById('dropbtn')
+  const          home =  document.getElementById('home')
   const      navRight = document.getElementById('nav-right')
   const   photography = document.getElementById('photography')
   const   printmaking = document.getElementById('printmaking')

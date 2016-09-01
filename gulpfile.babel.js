@@ -1,7 +1,7 @@
 import      gulp from "gulp"
-import     babel from "gulp-babel"
 import    concat from "gulp-concat"
 import       del from "del"
+import    eslint from "gulp-eslint"
 import      load from "gulp-load-plugins"
 import    prefix from "gulp-autoprefixer"
 import    rename from "gulp-rename"
@@ -13,13 +13,13 @@ const reload = sync.reload
 
 gulp.task('clean', del.bind(null, ['app/css/style.min.css', 'app/js/main.js', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
-gulp.task('default', ['html', 'fonts', 'images'], () => {
+gulp.task('default', ['html', 'lint', 'fonts', 'images'], () => {
   gulp.start('serve')
 })
 
 gulp.task('fonts', () => {
-    gulp.src(['app/fonts/**.eot', 'app/fonts/**.svg','app/fonts/**.ttf', 'app/fonts/**.woff'])
-    .pipe(gulp.dest('dist/fonts'))
+  gulp.src(['app/fonts/**.eot', 'app/fonts/**.svg','app/fonts/**.ttf', 'app/fonts/**.woff'])
+  .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', ['scripts', 'styles'], () => {
@@ -39,6 +39,13 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'))
 })
 
+gulp.task('lint', () => {
+  return gulp.src(['**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+})
+
 gulp.task('serve', () => {
   sync({
     notify: false,
@@ -50,7 +57,7 @@ gulp.task('serve', () => {
   gulp.watch(['app/*.html', 'app/css/**/*.sass', 'app/css/**/*.scss', 'app/js/*.js']).on('change', reload)
   gulp.watch('app/css/**/*.sass', ['styles'])
   gulp.watch('app/css/**/*.scss', ['styles'])
-  gulp.watch('app/js/*.js', ['scripts'])
+  gulp.watch('app/js/*.js', ['scripts', 'lint'])
 })
 
 gulp.task('serve:dist', () => {
@@ -66,7 +73,7 @@ gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(concat('main.js'))
     .pipe($.babel())
-    .pipe($.uglify().on('error', function(e){console.log(e);}))
+    .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest('app/js'))
     .pipe(gulp.dest('dist/js'))

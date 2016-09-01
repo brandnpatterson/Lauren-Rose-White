@@ -13,7 +13,7 @@
   const                footer = document.getElementById('footer')
   const                guitar = document.getElementById('guitar')
   const                  hand = document.getElementById('hand')
-  const              lavendar = document.getElementById('lavendar')
+  const              lavender = document.getElementById('lavender')
   const      modalPhotography = document.getElementById('modal-photography')
   const          modalCatBlue = document.getElementById('modal-cat-blue')
   const       modalClosePhoto = document.getElementById('modal-close-photo')
@@ -34,6 +34,7 @@
   const            modalWaves = document.getElementById('modal-waves')
   const                 palms = document.getElementById('palms')
   const               peacoat = document.getElementById('peacoat')
+  const                 waves = document.getElementById('waves')
 
   catBlue.onclick = () => {
     footer.style.display = "none"
