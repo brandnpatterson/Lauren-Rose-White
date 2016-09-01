@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 import      gulp from "gulp"
 import    concat from "gulp-concat"
 import       del from "del"
@@ -40,7 +42,7 @@ gulp.task('images', () => {
 })
 
 gulp.task('lint', () => {
-  return gulp.src(['**/*.js','!node_modules/**'])
+  return gulp.src(['*/**/*.js', '!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
@@ -57,7 +59,7 @@ gulp.task('serve', () => {
   gulp.watch(['app/*.html', 'app/css/**/*.sass', 'app/css/**/*.scss', 'app/js/*.js']).on('change', reload)
   gulp.watch('app/css/**/*.sass', ['styles'])
   gulp.watch('app/css/**/*.scss', ['styles'])
-  gulp.watch('app/js/*.js', ['scripts', 'lint'])
+  gulp.watch('app/js/*.js', ['lint'])
 })
 
 gulp.task('serve:dist', () => {

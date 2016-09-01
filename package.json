@@ -51,19 +51,6 @@
     "type": "git",
     "url": "git+https://github.com/brandnpatterson/Lauren.git"
   },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
-    }
-  },
-  "rules": {
-    "quotes": [
-      2,
-      "single"
-    ]
-  },
   "bugs": {
     "url": "https://github.com/brandnpatterson/Lauren/issues"
   }

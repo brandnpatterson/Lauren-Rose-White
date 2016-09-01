@@ -1,9 +1,9 @@
 !(() => {
 
-  const      people = document.getElementById('people')
-  const      nature = document.getElementById('nature')
-  const   navPeople = document.getElementById('nav-people')
-  const   navNature = document.getElementById('nav-nature')
+  const      people = document.getElementById("people")
+  const      nature = document.getElementById("nature")
+  const   navPeople = document.getElementById("nav-people")
+  const   navNature = document.getElementById("nav-nature")
 
   people.className = "visible"
   nature.className = "hidden"
