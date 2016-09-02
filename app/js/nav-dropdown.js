@@ -1,5 +1,4 @@
 !(() => {
-
   const       contact = document.getElementById("contact")
   const        footer = document.getElementById("footer")
   const      graphics = document.getElementById("graphics")

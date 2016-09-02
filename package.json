@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --require babel-polyfill ./test/*.js"
+  },
   "name": "lauren",
   "author": "Brandon Patterson",
   "description": "Portfolio Website for Houston area artist Lauren White",
@@ -15,16 +18,17 @@
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
     "browser-sync": "^2.13.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
     "cssnano": "^3.7.3",
     "del": "^2.2.1",
     "eslint": "^3.4.0",
-    "eslint-config-airbnb": "^10.0.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
@@ -45,10 +49,8 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.0",
     "gulp-watch": "^4.3.9",
-    "mocha": "^3.0.2"
-  },
-  "scripts": {
-    "test": "mocha --compilers js:babel-register --require babel-polyfill ./app/js/test/*.js"
+    "mocha": "^3.0.2",
+    "webpack": "^1.13.2"
   },
   "repository": {
     "type": "git",

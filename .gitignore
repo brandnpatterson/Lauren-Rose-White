@@ -1,4 +1,5 @@
 ### Basic ###
+style.min.css
 main.min.js
 .tmp
 dist
@@ -79,4 +80,3 @@ jspm_packages
 .sass-cache/
 *.css.map
 .css
-style.min.css

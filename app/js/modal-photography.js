@@ -1,5 +1,4 @@
 !(() => {
-
   const               catBlue = document.getElementById("cat-blue")
   const           catWhitePho = document.getElementById("cat-white-photo")
   const               catYawn = document.getElementById("cat-yawn")
