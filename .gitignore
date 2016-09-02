@@ -79,3 +79,4 @@ jspm_packages
 .sass-cache/
 *.css.map
 .css
+style.min.css

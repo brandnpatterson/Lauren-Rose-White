@@ -36,6 +36,7 @@
   const               peacoat = document.getElementById("peacoat")
   const                 waves = document.getElementById("waves")
 
+  // Display only the modal that is selected
   catBlue.onclick = () => {
     footer.style.display = "none"
     modalPhotography.style.display = "block"

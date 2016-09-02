@@ -42,7 +42,7 @@ gulp.task('images', () => {
 })
 
 gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/**'])
+  return gulp.src(['*/**/*.js', '!node_modules/**', '!app/js/test/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
