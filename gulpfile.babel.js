@@ -13,10 +13,16 @@ import      sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
+gulp.task('build', ['html', 'fonts', 'images'])
+
 gulp.task('clean', del.bind(null, ['app/css/style.min.css', 'app/js/main.js', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('default', ['html', 'lint', 'fonts', 'images'], () => {
   gulp.start('serve')
+})
+
+gulp.task('dist', ['clean'], () => {
+  gulp.start('serve:dist', ['build'])
 })
 
 gulp.task('fonts', () => {
@@ -27,7 +33,7 @@ gulp.task('fonts', () => {
 gulp.task('html', ['scripts', 'styles'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['app']}))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'))
 })
 
