@@ -1,4 +1,5 @@
 !(() => {
+  
   const      people = document.getElementById("people")
   const      nature = document.getElementById("nature")
   const   navPeople = document.getElementById("nav-people")

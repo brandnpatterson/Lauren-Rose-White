@@ -1,4 +1,5 @@
 !(() => {
+
   const               catBlue = document.getElementById("cat-blue")
   const           catWhitePho = document.getElementById("cat-white-photo")
   const               catYawn = document.getElementById("cat-yawn")
@@ -174,26 +175,24 @@
     modalWaves.style.display = "block"
   }
 
-  window.onclick = (event) => {
-    if (event.target === modalPhotography) {
-      footer.style.display = "block"
-      modalPhotography.style.display = "none"
-      modalCatBlue.style.display = "none"
-      modalCatWhitePho.style.display = "none"
-      modalCatYawn.style.display = "none"
-      modalColors.style.display = "none"
-      modalDolphin.style.display = "none"
-      modalDrops.style.display = "none"
-      modalFields.style.display = "none"
-      modalFlowersDark.style.display = "none"
-      modalFlowerWhite.style.display = "none"
-      modalFlowerYellow.style.display = "none"
-      modalGuitar.style.display = "none"
-      modalHand.style.display = "none"
-      modalLavender.style.display = "none"
-      modalPalms.style.display = "none"
-      modalPeacoat.style.display = "none"
-      modalWaves.style.display = "none"
-    }
+  modalPhotography.onclick = () => {
+    footer.style.display = "block"
+    modalPhotography.style.display = "none"
+    modalCatBlue.style.display = "none"
+    modalCatWhitePho.style.display = "none"
+    modalCatYawn.style.display = "none"
+    modalColors.style.display = "none"
+    modalDolphin.style.display = "none"
+    modalDrops.style.display = "none"
+    modalFields.style.display = "none"
+    modalFlowersDark.style.display = "none"
+    modalFlowerWhite.style.display = "none"
+    modalFlowerYellow.style.display = "none"
+    modalGuitar.style.display = "none"
+    modalHand.style.display = "none"
+    modalLavender.style.display = "none"
+    modalPalms.style.display = "none"
+    modalPeacoat.style.display = "none"
+    modalWaves.style.display = "none"
   }
 })()
