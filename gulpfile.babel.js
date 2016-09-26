@@ -79,6 +79,7 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
+    .pipe(gulp.dest('app/js'))
     .pipe(gulp.dest('dist/js'))
 })
 
@@ -87,5 +88,6 @@ gulp.task('styles', () => {
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(rename({suffix: '.min'}))
   .pipe(prefix('last 2 versions'))
+  .pipe(gulp.dest('app/css'))
   .pipe(gulp.dest('dist/css'))
 })
