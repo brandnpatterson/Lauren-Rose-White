@@ -15,7 +15,7 @@ const reload = sync.reload
 
 gulp.task('build', ['html', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/css/style.min.css', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('default', ['html', 'lint', 'fonts', 'images'], () => {
   gulp.start('serve')
@@ -64,22 +64,12 @@ gulp.task('serve', () => {
   gulp.watch('app/js/*.js', ['lint'])
 })
 
-gulp.task('serve:app', () => {
-  sync({
-    notify: false,
-    server: {
-      baseDir: 'app'
-    }
-  })
-})
-
 gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(concat('main.js'))
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
-    .pipe(gulp.dest('app/js'))
     .pipe(gulp.dest('dist/js'))
 })
 
@@ -88,6 +78,5 @@ gulp.task('styles', () => {
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(rename({suffix: '.min'}))
   .pipe(prefix('last 2 versions'))
-  .pipe(gulp.dest('app/css'))
   .pipe(gulp.dest('dist/css'))
 })
