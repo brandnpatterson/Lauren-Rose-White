@@ -4,17 +4,14 @@
   },
   "name": "lauren",
   "author": "Brandon Patterson",
-  "description": "Portfolio Website for Houston area artist Lauren White",
+  "description": "Portfolio website for Houston area artist Lauren White",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "license": "ISC",
   "url": "",
-  "homepage": "https://brandnpatterson.github.io/lauren",
-  "private": true,
-  "engines": {
-    "node": ">=4"
+  "homepage": "https://brandnpatterson.com/lauren",
+  "dependencies": {
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
@@ -44,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/Lauren.git"
+    "url": "git+https://github.com/brandnpatterson/lauren.git"
   },
   "bugs": {
-    "url": "https://github.com/brandnpatterson/Lauren/issues"
+    "url": "https://github.com/brandnpatterson/lauren/issues"
   }
 }

@@ -1,6 +1,7 @@
-# Created by https://www.gitignore.io/api/osx,node,sass
+### Basic ###
 .tmp
-dist
+
+# Created by https://www.gitignore.io/api/osx,node,sass
 
 ### OSX ###
 *.DS_Store
