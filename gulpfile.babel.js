@@ -52,6 +52,11 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError())
 })
 
+// Rebuild
+gulp.task('rb', ['clean', 'default'], () => {
+
+})
+
 gulp.task('serve', () => {
   sync({
     notify: false,
