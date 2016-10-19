@@ -1,21 +1,18 @@
-/* eslint-env node */
-
-import      gulp from "gulp"
-import    concat from "gulp-concat"
-import       del from "del"
-import    eslint from "gulp-eslint"
-import      load from "gulp-load-plugins"
-import    prefix from "gulp-autoprefixer"
-import    rename from "gulp-rename"
-import      sass from "gulp-sass"
-import      sync from "browser-sync"
+import       gulp from "gulp"
+import     concat from "gulp-concat"
+import        del from "del"
+import     eslint from "gulp-eslint"
+import       load from "gulp-load-plugins"
+import     prefix from "gulp-autoprefixer"
+import     rename from "gulp-rename"
+import       sass from "gulp-sass"
+import sourcemaps from "gulp-sourcemaps"
+import       sync from "browser-sync"
 
 const $ = load()
 const reload = sync.reload
 
 gulp.task('build', ['html', 'lint', 'fonts', 'images'])
-
-gulp.task('clean', del.bind(null, ['app/css/*.css', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('clean', del.bind(null, ['index.html', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
@@ -30,8 +27,10 @@ gulp.task('fonts', () => {
 
 gulp.task('html', ['scripts', 'styles'], () => {
   return gulp.src('app/*.html')
+    .pipe(sourcemaps.init())
     .pipe($.useref({searchPath: ['app']}))
     .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'))
 })
 
@@ -46,15 +45,23 @@ gulp.task('images', () => {
 })
 
 gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/**', '!test/**', '!**/*.min.js'])
+  return gulp.src(['*/**/*.js', '!node_modules/**', '!test/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
 })
 
-// Rebuild
-gulp.task('rb', ['clean', 'default'], () => {
+gulp.task('rb', ['clean', 'default'], () => {})
 
+gulp.task('scripts', () => {
+  return gulp.src('app/js/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.js'))
+    .pipe($.babel())
+    .pipe($.uglify())
+    .pipe($.rename({suffix: '.min'}))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/js'))
 })
 
 gulp.task('serve', () => {
@@ -62,29 +69,23 @@ gulp.task('serve', () => {
     notify: false,
     server: {
       baseDir: './'
-    }
+    },
+    port: 8888
   })
-})
-
-gulp.task('scripts', () => {
-  return gulp.src('app/js/*.js')
-    .pipe(concat('main.js'))
-    .pipe($.babel())
-    .pipe($.uglify())
-    .pipe($.rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'))
 })
 
 gulp.task('styles', () => {
   gulp.src('app/css/style.scss')
+  .pipe(sourcemaps.init())
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(rename({suffix: '.min'}))
   .pipe(prefix('last 2 versions'))
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest('dist/css'))
 })
 
 gulp.task('watch', () => {
-  gulp.watch('app/*.html', ['html', reload])
-  gulp.watch('app/css/**/*.less', ['styles', reload])
-  gulp.watch('app/js/*.js', ['scripts', reload])
+    gulp.watch('app/*.html', ['html', reload])
+    gulp.watch('app/css/**/*.*', ['styles', reload])
+    gulp.watch('app/js/*.js', ['scripts', reload])
 })
