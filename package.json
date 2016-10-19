@@ -16,7 +16,9 @@
   "license": "ISC",
   "url": "http://brandnpatterson.com/lauren",
   "homepage": "http://brandnpatterson.com/lauren",
-  "dependencies": {},
+  "dependencies": {
+
+  },
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^6.1.2",
