@@ -1,16 +1,23 @@
 {
-  "scripts": {
-    "test": "mocha --compilers js:babel-register --require babel-polyfill ./test/*.js"
-  },
   "name": "lauren",
+  "version": "1.0.0",
+  "scripts": {
+    "test": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+    }
+  ],
   "author": "Brandon Patterson",
   "description": "Portfolio website for Houston area artist Lauren White",
-  "version": "1.0.0",
   "main": "index.html",
   "license": "ISC",
-  "url": "",
-  "homepage": "https://brandnpatterson.com/lauren",
+  "url": "http://brandnpatterson.com/lauren",
+  "homepage": "http://brandnpatterson.com/lauren",
   "dependencies": {
+
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -20,8 +27,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
     "browser-sync": "^2.13.0",
-    "chai": "^3.5.0",
     "del": "^2.2.1",
+    "eslint": "^3.8.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
@@ -36,8 +43,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.0",
-    "gulp-watch": "^4.3.9",
-    "mocha": "^3.0.2"
+    "gulp-watch": "^4.3.9"
   },
   "repository": {
     "type": "git",
