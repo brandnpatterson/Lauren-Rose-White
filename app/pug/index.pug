@@ -1,0 +1,214 @@
+doctype html
+html(lang='en-US')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible' content='ie-edge')
+    link(href='dist/images/favicon.ico' rel='icon' type='image/x-icon')
+    link(href='dist/css/style.min.css' rel='stylesheet')
+    title Lauren Rose White
+  body
+    nav
+      img#dropbtn(src='dist/images/dropbtn.png' alt='menu icon')
+      ul#nav-left
+        li
+        a#nav-graphics(href='#0')
+            h2 GRAPHICS
+        li
+          a#nav-photography(href='#0')
+            h2 PHOTOGRAPHY
+        li
+          a#nav-printmaking(href='#0')
+            h2 PRINTMAKING
+        li
+          a#nav-videos(href='#0')
+            h2 VIDEOS
+        li
+          a#nav-close(href='#0')
+            h2 X
+      // end nav-left
+
+      ul#nav-right
+        li
+          a#nav-home(href='#0')
+            h2 LAUREN ROSE WHITE
+        li
+          a#nav-contact(href='#0')
+            h2 CONTACT
+      // end nav-right
+    // end nav
+
+    #wrapper
+      #contact.hidden
+        a
+          img(src='dist/images/lauren.jpg' alt='lauren')
+        .about-me
+          h2 Hi! My name is Lauren!
+          p I'm an artist based in the Houston area and my favorite mediums are photography, printmaking, and video! Say that three times fast!
+      // end contact
+
+      #graphics.hidden
+        p This is a resume I build for a web developer, Brandon Patterson.
+        a(href='dist/images/brandon-patterson-resume.pdf' download)
+          img.brandon-resume(src='dist/images/brandon-patterson-resume.png' alt='brandon patterson\'s resume')
+      // end graphics
+
+      #home
+        ul.gallery
+          li#flowers
+            a(href='#0')
+              img(src='dist/images/flowers.jpg' alt='white flowers')
+          li#leaf
+            a(href='#0')
+              img(src='dist/images/leaf.jpg' alt='a single leaf')
+          li#cat-white-home
+            a(href='#0')
+              img(src='dist/images/cat-white.jpg' alt='a white fluffy cat')
+        // end gallery
+
+        #modal-home.hidden
+          span#modal-close-home x
+          #modal-flowers
+            img(src='dist/images/leaf.jpg' alt='a single leaf')
+          #modal-cat-white-home
+            img(src='dist/images/cat-white.jpg' alt='a white fluffy cat')
+        // end modal-home
+      // end home
+
+      #photography.hidden
+        .nav-sub
+          p#nav-people.underline People
+          p#nav-nature Nature
+        // end nav-sub
+
+        ul#people
+          li#peacoat
+            a(href='#0')
+              img(src='dist/images/pea-coat.jpg' alt='a girl in a peacoat')
+          li#hand
+            a(href='#0')
+              img(src='dist/images/hand.jpg' alt='a hand covers the sunlight')
+          li#guitar
+            a(href='#0')
+              img(src='dist/images/guitar.jpg' alt='a girl playing guitar')
+        // end people
+
+        ul#nature.hidden
+          li#flower-yellow
+            a(href='#0')
+              img(src='dist/images/flower-yellow.jpg' alt='a yellow flower')
+          li#waves
+            a(href='#0')
+              img(src='dist/images/waves.jpg' alt='a bird at the beach at sunset')
+          li#dolphin
+            a(href='#0')
+              img(src='dist/images/dolphin.jpg' alt='a dolphin leaping out of the water')
+          li#fields
+            a(href='#0')
+              img(src='dist/images/fields.jpg' alt=' a green field under blue skies')
+          li#colors
+            a(href='#0')
+              img(src='dist/images/colors.jpg' alt='a lot of colorful flowers')
+          li#flowers-dark
+            a(href='#0')
+              img(src='dist/images/flowers-dark.jpg' alt='flowers at night')
+          li#cat-blue
+            a(href='#0')
+              img(src='dist/images/cat-blue-eyes.jpg' alt='a cat with blue eyes')
+          li#drops
+            a(href='#0')
+              img(src='dist/images/drops.jpg' alt='tree with water drops on it')
+          li#palms
+            a(href='#0')
+              img(src='dist/images/palms.jpg' alt='palm trees at sunset')
+          li#cat-white-photo
+            a(href='#0')
+              img(src='dist/images/cat-white.jpg' alt='a white fluffy cat')
+          li#cat-yawn
+            a(href='#0')
+              img(src='dist/images/cat-yawn.jpg' alt='a cat yawning')
+          li#flower-white
+            a(href='#0')
+              img(src='dist/images/flower-white.jpg' alt='a white flower')
+          li#lavender
+            a(href='#0')
+              img(src='dist/images/lavender.jpg' alt='purple flowers')
+        // end nature
+
+        #modal-photography.hidden
+          span#modal-close-photo x
+          // People Modal
+          #modal-peacoat
+            img(src='dist/images/pea-coat.jpg', alt='a girl in a peacoat')
+          #modal-hand
+            img(src='dist/images/hand.jpg', alt='a hand covers the sunlight')
+          #modal-guitar
+            img(src='dist/images/guitar.jpg', alt='a girl playing guitar')
+          // Nature Modal
+          #modal-flower-yellow
+            img(src='dist/images/flower-yellow.jpg', alt='a yellow flower')
+          #modal-waves
+            img(src='dist/images/waves.jpg', alt='a bird at the beach at sunset')
+          #modal-dolphin
+            img(src='dist/images/dolphin.jpg', alt='a dolphin jumping')
+          #modal-fields
+            img(src='dist/images/fields.jpg', alt='a green field under blue skies')
+          #modal-colors
+            img(src='dist/images/colors.jpg', alt='a lot of colorful flowers')
+          #modal-flowers-dark
+            img(src='dist/images/flowers-dark.jpg', alt='flowers at night')
+          #modal-cat-blue
+            img(src='dist/images/cat-blue-eyes.jpg', alt='a cat with blue eyes')
+          #modal-drops
+            img(src='dist/images/drops.jpg', alt='tree with water drops on it')
+          #modal-palms
+            img(src='dist/images/palms.jpg', alt='palm trees at sunset')
+          #modal-cat-white-photo
+            img(src='dist/images/cat-white.jpg', alt='a white fluffy cat')
+          #modal-cat-yawn
+            img(src='dist/images/cat-yawn.jpg', alt='a cat yawning')
+          #modal-flower-white
+            img(src='dist/images/flower-white.jpg', alt='a white flower')
+          #modal-lavender
+            img(src='dist/images/lavender.jpg', alt='purple flowers')
+        // end modal-photography
+      // end photography
+
+      #printmaking.hidden
+        ul#gallery
+          li#shells-print
+            a(href='#0')
+              img(src='dist/images/shells-print.jpg', alt='shells')
+              p This is a sketch of a few shells that my family and I picked up from the beach many years ago. We still have them!
+        // end gallery
+
+        #modal-printmaking.hidden
+          span#modal-close-print x
+          #modal-shells-print
+            img(src='dist/images/shells-print.jpg', alt='shells')
+        // end modal-printmaking
+      // end printmaking
+
+      #videos.hidden
+        p Brandon Patterson covers The Killers - "When You Were Young"
+        iframe(width='340', height='215', src='https://www.youtube.com/embed/lbcizyWw3Oc', frameborder='0', allowfullscreen='')
+      // end videos
+
+      footer#footer
+        a(href='mailto:wbrchair13@gmail.com')
+          img.social(src='dist/images/email-logo.png', alt='email logo')
+        a(href='http://www.instagram.com/catladylaurenn')
+          img.social(src='dist/images/instagram-logo.png', alt='instagram logo')
+        a(href='http://www.twitter.com/catladylaurenn')
+          img.social(src='dist/images/twitter-logo.png', alt='twitter logo')
+        a(href='https://www.facebook.com/catladylaurenn')
+          img.social(src='dist/images/facebook-logo.png', alt='facebook logo')
+        a(href='https://brandnpatterson.github.io')
+          p &copy;
+            script(type='text/javascript').
+              document.write(new Date().getFullYear());
+            | &nbsp; Brandon Patterson. All Rights Reserved.
+      // end footer
+    // end wrapper
+
+    script(src='dist/js/main.min.js')

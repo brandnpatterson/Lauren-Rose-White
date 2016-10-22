@@ -16,9 +16,7 @@
   "license": "ISC",
   "url": "http://brandnpatterson.com/lauren",
   "homepage": "http://brandnpatterson.com/lauren",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^6.1.2",
@@ -38,6 +36,7 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.2",
     "gulp-load-plugins": "^1.3.0",
+    "gulp-pug": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.8.1",
