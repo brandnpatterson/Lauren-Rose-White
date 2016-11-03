@@ -1,14 +1,15 @@
 !(() => {
 
-  const         catWhiteHome = document.getElementById("cat-white-home")
-  const       modalCloseHome = document.getElementById("modal-close-home")
-  const              flowers = document.getElementById("flowers")
-  const               footer = document.getElementById("footer")
-  const                 leaf = document.getElementById("leaf")
-  const            modalHome = document.getElementById("modal-home")
-  const    modalCatWhiteHome = document.getElementById("modal-cat-white-home")
-  const            modalLeaf = document.getElementById("modal-leaf")
-  const         modalFlowers = document.getElementById("modal-flowers")
+  const
+    catWhiteHome      = document.getElementById("cat-white-home"),
+    modalCloseHome    = document.getElementById("modal-close-home"),
+    flowers           = document.getElementById("flowers"),
+    footer            = document.getElementById("footer"),
+    leaf              = document.getElementById("leaf"),
+    modalHome         = document.getElementById("modal-home"),
+    modalCatWhiteHome = document.getElementById("modal-cat-white-home"),
+    modalLeaf         = document.getElementById("modal-leaf"),
+    modalFlowers      = document.getElementById("modal-flowers")
 
   catWhiteHome.onclick = () => {
     footer.style.display = "none"

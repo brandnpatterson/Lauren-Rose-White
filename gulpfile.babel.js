@@ -60,7 +60,7 @@ gulp.task('pug-pretty', () => {
 })
 
 gulp.task('scripts', () => {
-  return gulp.src('app/js/*.js')
+  return gulp.src(['app/js/globals/globals.js', 'app/js/*.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe($.babel())

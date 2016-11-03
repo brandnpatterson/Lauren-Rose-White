@@ -1,17 +1,18 @@
 !(() => {
-  
-  const          contact = document.getElementById("contact")
-  const         graphics = document.getElementById("graphics")
-  const             home = document.getElementById("home")
-  const       navContact = document.getElementById("nav-contact")
-  const      navGraphics = document.getElementById("nav-graphics")
-  const          navHome = document.getElementById("nav-home")
-  const   navPrintmaking = document.getElementById("nav-printmaking")
-  const   navPhotography = document.getElementById("nav-photography")
-  const        navVideos = document.getElementById("nav-videos")
-  const      photography = document.getElementById("photography")
-  const      printmaking = document.getElementById("printmaking")
-  const           videos = document.getElementById("videos")
+
+  const
+    contact        = document.getElementById("contact"),
+    graphics       = document.getElementById("graphics"),
+    home           = document.getElementById("home"),
+    navContact     = document.getElementById("nav-contact"),
+    navGraphics    = document.getElementById("nav-graphics"),
+    navHome        = document.getElementById("nav-home"),
+    navPrintmaking = document.getElementById("nav-printmaking"),
+    navPhotography = document.getElementById("nav-photography"),
+    navVideos      = document.getElementById("nav-videos"),
+    photography    = document.getElementById("photography"),
+    printmaking    = document.getElementById("printmaking"),
+    videos         = document.getElementById("videos")
 
   // Set these divs to display none at default
   contact.className = "hidden"

@@ -1,14 +1,15 @@
 !(() => {
-  
-  const       contact = document.getElementById("contact")
-  const        footer = document.getElementById("footer")
-  const      graphics = document.getElementById("graphics")
-  const       dropbtn = document.getElementById("dropbtn")
-  const          home =  document.getElementById("home")
-  const      navRight = document.getElementById("nav-right")
-  const   photography = document.getElementById("photography")
-  const   printmaking = document.getElementById("printmaking")
-  const        videos = document.getElementById("videos")
+
+  const
+    contact     = document.getElementById("contact"),
+    footer      = document.getElementById("footer"),
+    graphics    = document.getElementById("graphics"),
+    dropbtn     = document.getElementById("dropbtn"),
+    home        =  document.getElementById("home"),
+    navRight    = document.getElementById("nav-right"),
+    photography = document.getElementById("photography"),
+    printmaking = document.getElementById("printmaking"),
+    videos      = document.getElementById("videos")
 
   // When dropbtn is clicked,
   dropbtn.onclick = () => {

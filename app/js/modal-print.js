@@ -1,10 +1,11 @@
 !(() => {
 
-  const                   footer = document.getElementById("footer")
-  const          modalClosePrint = document.getElementById("modal-close-print")
-  const               modalPrint = document.getElementById("modal-printmaking")
-  const         modalShellsPrint = document.getElementById("modal-shells-print")
-  const              shellsPrint = document.getElementById("shells-print")
+  const
+    footer           = document.getElementById("footer"),
+    modalClosePrint  = document.getElementById("modal-close-print"),
+    modalPrint       = document.getElementById("modal-printmaking"),
+    modalShellsPrint = document.getElementById("modal-shells-print"),
+    shellsPrint      = document.getElementById("shells-print")
 
   shellsPrint.onclick = () => {
     footer.style.display = "none"
