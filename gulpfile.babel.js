@@ -13,9 +13,9 @@ import       sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
-gulp.task('build', ['html', 'index', 'pug-pretty', 'lint', 'fonts', 'images'])
+gulp.task('build', ['index', 'html', 'pug-pretty', 'lint', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['*.html', 'app/js/**.min.js', 'app/index.html', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/*.html', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['*.html', 'app/js/**.min.js', 'app/index.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/images/*', 'dist/html/*', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
@@ -26,7 +26,7 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('html', ['scripts', 'styles'], () => {
+gulp.task('html', () => {
   return gulp.src('app/pug/*.pug')
     .pipe(sourcemaps.init())
     .pipe(pug())
@@ -34,7 +34,7 @@ gulp.task('html', ['scripts', 'styles'], () => {
     .pipe(gulp.dest('./dist/html'))
 })
 
-gulp.task('index', () => {
+gulp.task('index', ['scripts', 'styles'], () => {
   return gulp.src('app/pug/index.pug')
     .pipe(sourcemaps.init())
     .pipe(pug())
