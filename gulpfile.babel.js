@@ -13,7 +13,7 @@ import       sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
-gulp.task('build', ['html', 'pug-pretty', 'lint', 'fonts', 'images'])
+gulp.task('build', ['html', 'index', 'pug-pretty', 'lint', 'fonts', 'images'])
 
 gulp.task('clean', del.bind(null, ['*.html', 'app/js/**.min.js', 'app/index.html', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/*.html', 'dist/js/main.min.js'], {read: false}))
 
@@ -28,6 +28,14 @@ gulp.task('fonts', () => {
 
 gulp.task('html', ['scripts', 'styles'], () => {
   return gulp.src('app/pug/*.pug')
+    .pipe(sourcemaps.init())
+    .pipe(pug())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/html'))
+})
+
+gulp.task('index', () => {
+  return gulp.src('app/pug/index.pug')
     .pipe(sourcemaps.init())
     .pipe(pug())
     .pipe(sourcemaps.write())
@@ -60,7 +68,7 @@ gulp.task('pug-pretty', () => {
 })
 
 gulp.task('scripts', () => {
-  return gulp.src(['app/js/app-nav.js', 'app/js/*.js'])
+  return gulp.src(['app/js/hash.js', 'app/js/*.js'])
     .pipe(sourcemaps.init())
     .pipe(conc('main.js'))
     .pipe($.babel())
