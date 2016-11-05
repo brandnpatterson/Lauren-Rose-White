@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  // Underline People and show it, remove underline from Nature and hide it
+  // People - Underline People and show it, remove underline from Nature and hide it
   $(document).on('click', '#nav-people', function(){
     var $this = this
     $(this).addClass('underline')
@@ -8,7 +8,7 @@ $(document).ready(function(){
     $('#people').show()
   })
 
-  // Underline Nature and show it, remove underline from People and hide it
+  // Nature - Underline Nature and show it, remove underline from People and hide it
   $(document).on('click', '#nav-nature', function(){
     var $this = this
     $(this).addClass('underline')

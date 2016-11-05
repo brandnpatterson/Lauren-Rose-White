@@ -1,5 +1,4 @@
 !(() => {
-
   const
     footer      = document.getElementById('footer'),
     dropbtn     = document.getElementById('dropbtn'),
