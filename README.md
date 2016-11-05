@@ -1,2 +1,2 @@
 # lauren-portfolio
-Portfolio Website for Houston area artist Lauren White
+Portfolio Website for Houston area artist Lauren White.
