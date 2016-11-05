@@ -2,36 +2,50 @@
   #modal-close-photo
     top: 15%
 
-@media #{$desktop}
+  #photography .modal img
+    margin: 40% 0
+    max-width: 80%
 
+  .closebtn
+    top: 0
+    right: 0
+
+  #photography .closebtn
+    top: 100px
+    right: 100px
+
+
+@media #{$iPad}
+  #photography .modal img
+    margin: 5% 0
+    max-width: 65%
+
+  .closebtn
+    top: 0
+    right: 0
+
+  #photography .closebtn
+    top: 20px
+    right: 200px
+
+@media #{$desktop}
   #nav-right
     padding-right: 6%
 
 @media screen and (min-width: 815px)
-
   iframe
     height: 315px
     width: 560px
 
 @media screen and (min-width: 901px)
-
   #nav-close, #dropbtn
     display: none
 
-  #responsive
-    background-color: #fff
-    display: flex
-    flex-direction: row
-    position: relative
-    z-index: 0
-
 @media screen and (min-width: 1130px)
-
   #modal-close-print
     right: 15%
 
 @media screen and (min-width: 1200px)
-
   #modal-close-photo
     right: 28%
 
@@ -39,17 +53,14 @@
     right: 25%
 
 @media screen and (max-width: 635px)
-
   #nav-close
     right: 13%
     top: 1%
 
 @media screen and (max-width: 900px)
-
   #nav-left
     display: none
 
 @media screen and (min-width: 1215px)
-
   #modal-close-home
     right: 25%

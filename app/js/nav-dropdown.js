@@ -1,44 +1,21 @@
 !(() => {
 
   const
-    contact     = document.getElementById("contact"),
-    footer      = document.getElementById("footer"),
-    graphics    = document.getElementById("graphics"),
-    dropbtn     = document.getElementById("dropbtn"),
-    home        =  document.getElementById("home"),
-    navRight    = document.getElementById("nav-right"),
-    photography = document.getElementById("photography"),
-    printmaking = document.getElementById("printmaking"),
-    videos      = document.getElementById("videos")
+    footer      = document.getElementById('footer'),
+    dropbtn     = document.getElementById('dropbtn'),
+    navRight    = document.getElementById('nav-right')
 
-  // When dropbtn is clicked,
+  // Hide the footer and navRight when the dropbtn is clicked, else show them
   dropbtn.onclick = () => {
-    let x = document.getElementById("nav-left")
-    // If nav-left has the class of nav-left, make its only id responsive
-    // Give the following divs the class of visible
-    if (x.id === "nav-left") {
-      x.id = "responsive"
-      contact.className = "hidden"
-      footer.className = "hidden"
-      graphics.className = "hidden"
-      home.className = "visible"
-      dropbtn.className = "hidden"
-      navRight.className = "hidden"
-      photography.className = "hidden"
-      printmaking.className = "hidden"
-      videos.className = "hidden"
+    let x = document.getElementById('nav-left')
+    if (x.id === 'nav-left') {
+      x.id = 'responsive'
+      footer.className = 'hidden'
+      navRight.className = 'hidden'
     } else {
-      // Give the following divs the class of visible
-      x.id = "nav-left"
-      contact.className = "visible"
-      footer.className = "visible"
-      graphics.className = "visible"
-      home.className = "visible"
-      dropbtn.className = "visible"
-      navRight.className = "visible"
-      photography.className = "visible"
-      printmaking.className = "visible"
-      videos.className = "visible"
+      x.id = 'nav-left'
+      dropbtn.className = 'visible'
+      navRight.className = 'visible'
     }
   }
 })()

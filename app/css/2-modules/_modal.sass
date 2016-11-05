@@ -1,47 +1,26 @@
-// Both modals function the same, but are seperated to keep content modular
-#modal-photography, #modal-home, #modal-printmaking
-  background-color: rgb(0,0,0)
-  background-color: rgba(0,0,0,0.4)
-  height: 100%
-  left: 0
-  overflow: auto
-  padding-top: 100px
+.modal
   position: fixed
+  left: 0
   top: 0
   width: 100%
-  z-index: 1
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
 
-#modal-home img, #modal-photography img, #modal-printmaking img
-  max-width: 90%
-
-#modal-home div, #modal-photography div, #modal-printmaking div
-  border-radius: 10px
-  background-color: #fff
-  display: none
-  margin: 0 auto 300px
-  max-width: 90%
-  padding-top: 50px
-  padding-bottom: 50px
+#photography .modal img
+  padding-left: 25%
   text-align: center
-  width: 900px
+  margin: 0 auto
 
-#modal-close-home
-  cursor: pointer
-  position: absolute
-  right: 15%
-  top: 12%
-  font-size: 28px
+.modal-content
+  background-color: #fff
+  position: relative
+  padding: 0
+  outline: 0
 
-#modal-close-photo
+.closebtn
   cursor: pointer
-  position: absolute
-  right: 11%
+  font-size: 24px
+  font-weight: bold
+  right: 10%
   top: 10%
-  font-size: 28px
-
-#modal-close-print
-  cursor: pointer
   position: absolute
-  right: 11%
-  top: 10%
-  font-size: 28px
