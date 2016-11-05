@@ -1,5 +1,5 @@
 import       gulp from "gulp"
-import     concat from "gulp-concat"
+import       conc from "gulp-concat"
 import        del from "del"
 import     eslint from "gulp-eslint"
 import       load from "gulp-load-plugins"
@@ -62,7 +62,7 @@ gulp.task('pug-pretty', () => {
 gulp.task('scripts', () => {
   return gulp.src(['app/js/app-nav.js', 'app/js/*.js'])
     .pipe(sourcemaps.init())
-    .pipe(concat('main.js'))
+    .pipe(conc('main.js'))
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
