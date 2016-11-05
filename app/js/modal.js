@@ -6,7 +6,7 @@ $(document).ready(function(){
   })
 
   //    Open Modal - Home #img01-03   //
-  $(document).on('click', '.img-click', function(){
+  $(document).on('click', '.get-modal', function(){
     var $this = this
     var modalId = $($this).attr('data-click')
     $('#'+modalId).toggle()
