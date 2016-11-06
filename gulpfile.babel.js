@@ -15,7 +15,7 @@ const reload = sync.reload
 
 gulp.task('build', ['index', 'html', 'pug-pretty', 'lint', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['*.html', 'app/js/**.min.js', 'app/index.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/images/*', 'dist/html/*', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*', 'dist/css/*', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/*'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
@@ -27,7 +27,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('html', () => {
-  return gulp.src('app/pug/*.pug')
+  return gulp.src(['app/pug/*.pug'])
     .pipe(sourcemaps.init())
     .pipe(pug())
     .pipe(sourcemaps.write())
@@ -99,8 +99,7 @@ gulp.task('styles', () => {
 })
 
 gulp.task('watch', () => {
-    gulp.watch('app/pug/*.pug', ['html', reload])
-    gulp.watch('app/pug/*.pug', ['pug-pretty', reload])
-    gulp.watch('app/css/**/*.*', ['styles', reload])
-    gulp.watch('app/js/*.js', ['scripts', reload])
+    gulp.watch('app/pug/*', ['html', 'pug-pretty', reload])
+    gulp.watch('app/css/**/*', ['styles', reload])
+    gulp.watch('app/js/*', ['scripts', reload])
 })
