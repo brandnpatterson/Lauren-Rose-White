@@ -15,7 +15,7 @@ const reload = sync.reload
 
 gulp.task('build', ['index', 'html', 'pug-pretty', 'lint', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*', 'dist/css/*', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/*'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
@@ -43,7 +43,7 @@ gulp.task('index', ['scripts', 'styles'], () => {
 })
 
 gulp.task('images', () => {
-  return gulp.src('app/assets/images/**/*')
+  return gulp.src('app/assets/images/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -53,7 +53,7 @@ gulp.task('images', () => {
 })
 
 gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/**', '!test/**'])
+  return gulp.src(['*/**/*.js', '!node_modules/*', '!test/*'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
