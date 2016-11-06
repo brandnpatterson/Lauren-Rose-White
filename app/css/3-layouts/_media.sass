@@ -1,4 +1,8 @@
 @media #{$iPhone}
+  #nav-left
+    padding: 0
+    text-align: center
+
   #modal-close-photo
     top: 15%
 
@@ -14,8 +18,11 @@
     top: 100px
     right: 100px
 
-
 @media #{$iPad}
+  #nav-left
+    margin: 0 0 0 100px
+    text-align: center
+
   #photography .modal img
     margin: 5% 0
     max-width: 65%
@@ -41,17 +48,6 @@
   #nav-close, #dropbtn
     display: none
 
-@media screen and (min-width: 1130px)
-  #modal-close-print
-    right: 15%
-
-@media screen and (min-width: 1200px)
-  #modal-close-photo
-    right: 28%
-
-  #modal-close-print
-    right: 25%
-
 @media screen and (max-width: 635px)
   #nav-close
     right: 13%
@@ -60,7 +56,3 @@
 @media screen and (max-width: 900px)
   #nav-left
     display: none
-
-@media screen and (min-width: 1215px)
-  #modal-close-home
-    right: 25%

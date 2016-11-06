@@ -4,7 +4,10 @@ html(lang='en-US')
   include vars.pug
   body
     nav
-      img#dropbtn(src='dist/images/dropbtn.png' alt='menu icon')
+      #dropbtn(onclick='myFunction(this)')
+        div.bar1
+        div.bar2
+        div.bar3
       ul#nav-left
         li
           a#nav-graphics(href='#graphics')
@@ -18,8 +21,6 @@ html(lang='en-US')
         li
           a#nav-videos(href='#videos')
             h2 VIDEOS
-        li
-          h2#nav-close X
       ul#nav-right
         li
           a#nav-home(href='#home')
