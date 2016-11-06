@@ -1,5 +1,5 @@
 import       gulp from "gulp"
-import       conc from "gulp-concat"
+import     concat from "gulp-concat"
 import        del from "del"
 import     eslint from "gulp-eslint"
 import       load from "gulp-load-plugins"
@@ -22,7 +22,7 @@ gulp.task('default', ['build', 'watch'], () => {
 })
 
 gulp.task('fonts', () => {
-  gulp.src(['app/assets/fonts/**.eot', 'app/assets/fonts/**.svg','app/assets/fonts/**.ttf', 'app/assets/fonts/**.woff?'])
+  gulp.src(['app/assets/fonts/*.eot', 'app/assets/fonts/*.svg','app/assets/fonts/*.ttf', 'app/assets/fonts/*.woff', 'app/assets/fonts/*.woff2'])
   .pipe(gulp.dest('dist/fonts'))
 })
 
@@ -70,7 +70,7 @@ gulp.task('pug-pretty', () => {
 gulp.task('scripts', () => {
   return gulp.src(['app/js/hash.js', 'app/js/*.js'])
     .pipe(sourcemaps.init())
-    .pipe(conc('main.js'))
+    .pipe(concat('main.js'))
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
