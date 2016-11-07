@@ -4,11 +4,14 @@ html(lang='en-US')
   include vars.pug
   body
     nav
-      #dropbtn
-        div.bar1
-        div.bar2
-        div.bar3
       ul#nav-left
+        li
+          a#nav-home(href='#home')
+            h2 LAUREN ROSE WHITE
+        li
+          a#nav-contact(href='#contact')
+            h2 CONTACT
+      ul#nav-right
         li
           a#nav-graphics(href='#graphics')
             h2 GRAPHICS
@@ -21,13 +24,10 @@ html(lang='en-US')
         li
           a#nav-videos(href='#videos')
             h2 VIDEOS
-      ul#nav-right
-        li
-          a#nav-home(href='#home')
-            h2 LAUREN ROSE WHITE
-        li
-          a#nav-contact(href='#contact')
-            h2 CONTACT
+      #dropbtn
+        div.bar1
+        div.bar2
+        div.bar3
 
     #content
 

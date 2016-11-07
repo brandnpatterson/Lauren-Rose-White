@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   $('#dropbtn').click(function() { // Click dropbtn - toggle the following
-    $('#nav-left').toggle().toggleClass('responsive') // Created class for mobile nav
-    $('#nav-right').toggle()
+    $('#nav-right').toggle().toggleClass('responsive') // Created class for mobile nav
+    $('#nav-left').toggle()
     $('#content').toggle()
     $('footer').toggle()
   })
