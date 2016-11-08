@@ -1,4 +1,4 @@
-$('#dropbtn').click( () => { // Click dropbtn - toggle the following
+$('#dropbtn').click( function() { // Click dropbtn - toggle the following
   $('#nav-right').toggle().toggleClass('responsive') // Created class for mobile nav
   $('#nav-left').toggle()
   $('#content').toggle()
