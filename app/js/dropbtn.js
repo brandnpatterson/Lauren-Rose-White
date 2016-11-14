@@ -1,3 +1,7 @@
+/**
+ * Toggles from the DropBtn and the Responsive Menu
+ */
+
 // global
 var $document = $(document);
 
@@ -13,7 +17,7 @@ var DropBtn = (function() {
   // bind events
   $dropBtn.click(toggle);
   $document.on('click', '.responsive', responsive);
-  
+
   function responsive() { // Click .responsive -- makes dropbtn click
     $dropBtn.click();
   }
