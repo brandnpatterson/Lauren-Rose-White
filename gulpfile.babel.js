@@ -15,7 +15,7 @@ const reload = sync.reload
 
 gulp.task('build', ['index', 'html', 'pug-pretty', 'lint'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*.html', 'dist/views/*', 'dist/index.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*', 'dist/views/*', 'dist/index.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
