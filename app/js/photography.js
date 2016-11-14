@@ -2,7 +2,7 @@
  * Controls the styling on click of the Sub-Navigation on the Photography View
  */
 
- var Photography = (function() {
+var Photography = (function() {
 
   // bind events
   $document.on('click', '.nav-photo', photography);
