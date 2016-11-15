@@ -1,8 +1,13 @@
 /**
  * Controls the opening and closing of Modals
- */
+**/
+
+var $ = require('jquery');
 
 var Modal = (function() {
+
+  // cacheDOM
+  var $document = $(document);
 
   // bind events
   $document.on('click', '.get-modal', getModal);

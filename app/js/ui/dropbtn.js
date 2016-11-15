@@ -1,18 +1,19 @@
 /**
  * Toggles from the DropBtn and the Responsive Menu
- */
+**/
 
-// global
-var $document = $(document);
+var $ = require('jquery');
 
 var DropBtn = (function() {
 
   // cacheDOM
   var $content  = $('#content');
+  var $document = $(document);
   var $dropBtn  = $('#dropbtn');
   var $footer   = $('footer');
   var $navLeft  = $('#nav-left');
   var $navRight = $('#nav-right');
+  var $ngScope = $('.ng-scope');
 
   // bind events
   $dropBtn.click(toggle);
@@ -27,6 +28,7 @@ var DropBtn = (function() {
     $footer.toggle();
     $navLeft.toggle();
     $navRight.toggle().toggleClass('responsive'); // Created class for mobile nav
+    $ngScope.toggle();
     this.classList.toggle('change');
   }
 })();
