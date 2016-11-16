@@ -2,7 +2,7 @@
  * Toggles from the DropBtn and the Responsive Menu
 **/
 
-var $ = require('jquery');
+// global
 
 var DropBtn = (function() {
 
@@ -13,7 +13,6 @@ var DropBtn = (function() {
   var $footer   = $('footer');
   var $navLeft  = $('#nav-left');
   var $navRight = $('#nav-right');
-  var $ngScope = $('.ng-scope');
 
   // bind events
   $dropBtn.click(toggle);
@@ -28,7 +27,6 @@ var DropBtn = (function() {
     $footer.toggle();
     $navLeft.toggle();
     $navRight.toggle().toggleClass('responsive'); // Created class for mobile nav
-    $ngScope.toggle();
     this.classList.toggle('change');
   }
 })();

@@ -1,26 +1,22 @@
-.photography(data-ng-controller='PhotoController as photo')
+p.nav-photo.underline(data-click="people") People
+p.nav-photo(data-click="nature") Nature
 
-  h1 {{ photo.test }}
+#people
+  img.get-modal(data-click='modal05' src='dist/images/pea-coat.jpg' alt='a girl in a peacoat')
+  #modal05.modal.hidden
+    span.closebtn ×
+    img.modal-img(data-click='modal03' src='dist/images/pea-coat.jpg' alt='a girl in a peacoat')
 
-  p.nav-photo.underline(data-click="people") People
-  p.nav-photo(data-click="nature") Nature
+  img.get-modal(data-click='modal06' src='dist/images/hand.jpg' alt='a hand covers the sunlight')
+  #modal06.modal.hidden
+    span.closebtn ×
+    img.modal-img(src='dist/images/hand.jpg' alt='a hand covers the sunlight')
 
-  #people
-    img.get-modal(data-click='modal05' src='dist/images/pea-coat.jpg' alt='a girl in a peacoat')
-    #modal05.modal.hidden
-      span.closebtn ×
-      img.modal-img(data-click='modal03' src='dist/images/pea-coat.jpg' alt='a girl in a peacoat')
-
-    img.get-modal(data-click='modal06' src='dist/images/hand.jpg' alt='a hand covers the sunlight')
-    #modal06.modal.hidden
-      span.closebtn ×
-      img.modal-img(src='dist/images/hand.jpg' alt='a hand covers the sunlight')
-
-    img.get-modal(data-click='modal07' src='dist/images/guitar.jpg' alt='a girl playing guitar')
-    #modal07.modal.hidden
-      span.closebtn ×
-      img.modal-img(src='dist/images/guitar.jpg' alt='a girl playing guitar')
-  // end people
+  img.get-modal(data-click='modal07' src='dist/images/guitar.jpg' alt='a girl playing guitar')
+  #modal07.modal.hidden
+    span.closebtn ×
+    img.modal-img(src='dist/images/guitar.jpg' alt='a girl playing guitar')
+// end people
 
 #nature.hidden
   img.get-modal(data-click='modal08' src='dist/images/waves.jpg' alt='a bird at the beach at sunset')
@@ -82,7 +78,7 @@
   #modal19.modal.hidden
     span.closebtn ×
     img.modal-img(src='dist/images/lavender.jpg' alt='purple flowers')
-
+      
   img.get-modal(data-click='modal20' src='dist/images/flower-yellow.jpg' alt='a yellow flower')
   #modal20.modal.hidden
     span.closebtn ×

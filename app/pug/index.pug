@@ -1,39 +1,35 @@
 doctype
-html(lang='en-US' data-ng-app='routing')
+html(lang='en-US')
   include head.pug
   include vars.pug
-
-  body(data-ng-controller='MainController as main')
-
-    h1 {{ main.test }}
-
+  body
     nav
       ul#nav-left
         li
-          a(href='#/home')
+          a(href='#home')
             h2 LAUREN ROSE WHITE
         li
-          a(href='#/contact')
+          a(href='#contact')
             h2 CONTACT
       ul#nav-right
         li
-          a(href='#/graphics')
+          a(href='#graphics')
             h2 GRAPHICS
         li
-          a(href='#/photo')
+          a(href='#photography')
             h2 PHOTOGRAPHY
         li
-          a(href='#/print')
+          a(href='#printmaking')
             h2 PRINTMAKING
         li
-          a(href='#/videos')
+          a(href='#videos')
             h2 VIDEOS
       #dropbtn
         div.bar1
         div.bar2
         div.bar3
 
-    #content(ng-view)
+    #content
 
     footer
       a(href='mailto:wbrchair13@gmail.com')
@@ -50,8 +46,6 @@ html(lang='en-US' data-ng-app='routing')
           script(type='text/javascript') document.write(new Date().getFullYear());
           | &nbsp; Brandon Patterson. All Rights Reserved.
 
-    script(src='//code.angularjs.org/1.5.8/angular.min.js')
-    script(src='//code.angularjs.org/1.5.8/angular-animate.min.js')
-    script(src='//code.angularjs.org/1.5.8/angular-route.min.js')
-    scripts(src='dist/includes/bootstrap.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script window.jQuery || document.write('<script src="dist/inclues/jquery-3.1.1.min.js"><\x3C\/script>')
     script(src='dist/index.min.js')

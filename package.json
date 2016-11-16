@@ -35,7 +35,6 @@
   "url": "http://brandnpatterson.com/lauren",
   "homepage": "http://brandnpatterson.com/lauren",
   "dependencies": {
-    "angular-route": "^1.5.8",
     "jquery": "^3.1.1"
   },
   "devDependencies": {
@@ -50,8 +49,6 @@
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
     "eslint": "^2.10.2",
-    "eslint-config-angular": "^0.5.0",
-    "eslint-plugin-angular": "^1.4.1",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.11.2",
     "npm-run-all": "^2.1.1",

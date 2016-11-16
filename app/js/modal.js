@@ -2,8 +2,6 @@
  * Controls the opening and closing of Modals
 **/
 
-var $ = require('jquery');
-
 var Modal = (function() {
 
   // cacheDOM
