@@ -1,6 +1,6 @@
 /**
  * Toggles from the DropBtn and the Responsive Menu
-**/
+ */
 
 // global
 

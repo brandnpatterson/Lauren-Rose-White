@@ -1,6 +1,6 @@
 /**
  * Controls the opening and closing of Modals
-**/
+ */
 
 var Modal = (function() {
 
