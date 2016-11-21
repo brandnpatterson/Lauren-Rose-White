@@ -16,10 +16,11 @@
     "server": "browser-sync start --server --files='index.html, style.css, dist/index.min.js' --no-notify --port 8888",
     "start": "npm run clean && npm run build:js && npm run build:watch",
     "build:watch": "npm run build:all & npm run watch:all",
-    "watch:all": "npm-run-all -p watch:css watch:js watch:pug server",
+    "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:views server",
     "watch:css": "onchange 'app/css/**/*.sass' -- npm run build:css",
     "watch:js": "onchange 'app/js/**/*.js' -- webpack",
-    "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug"
+    "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug",
+    "watch:views": "onchange 'app/pug/*.pug' -- npm run build:views"
   },
   "licenses": [
     {

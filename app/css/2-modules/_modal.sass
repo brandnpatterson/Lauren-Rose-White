@@ -1,20 +1,23 @@
-.modal
-  height: 100%
-  position: fixed
-  left: 0
-  top: 0
-  width: 100vw
-
-.modal-img
-  position: relative
-  left: 40px
-  top: 100px
-  width: 75% !important
-
 .closebtn
   cursor: pointer
   font-size: 24px
   font-weight: bold
   position: absolute
-  right: 5%
-  top: 10%
+  z-index: 1
+
+.modal
+  height: 100%
+  overflow: auto
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+
+.modal-container, .modal-container_big
+  background-color: #fff
+  border-radius: 10px
+  box-shadow: 5px 5px 10px #666
+  position: relative
+
+.modal-img
+  position: relative
