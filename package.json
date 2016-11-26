@@ -1,6 +1,6 @@
 {
   "name": "lauren",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
     "build:all": "npm run build:pug & npm run build:views & npm run build:css",
