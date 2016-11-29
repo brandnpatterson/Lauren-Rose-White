@@ -40,15 +40,15 @@ var $ = require('jquery');
   }
 
   // Click .responsive -- makes dropbtn click
-  toggle.responsiveClick = function() {
+  toggle.responsiveClose = function() {
     $dropBtn.click();
   }
 
-  // Created class for mobile nav
   toggle.responsive = function() {
     $content.toggle();
     $footer.toggle();
     $navLeft.toggle();
+    /* responsive class Created here for closing nav-right on mobile only */
     $navRight.toggle().toggleClass('responsive');
     this.classList.toggle('dropBtnChange');
   }
@@ -57,6 +57,6 @@ var $ = require('jquery');
   $document.on('click', '.closebtn', toggle.closeBtn);
   $document.on('click', '.get-modal', toggle.getModal);
   $document.on('click', '.nav-photo', toggle.photoNav);
-  $document.on('click', '.responsive', toggle.responsiveClick);
+  $document.on('click', '.responsive', toggle.responsiveClose);
   $dropBtn.click(toggle.responsive);
 }();

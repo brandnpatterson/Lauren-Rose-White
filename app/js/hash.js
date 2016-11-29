@@ -1,3 +1,6 @@
+// Require jQuery for the following
+var $ = require('jquery');
+
 // This script implements simple routing by loading partial HTML files
 // named corresponding to fragment identifiers.
 //
@@ -6,9 +9,6 @@
 // Wrap everything in an immediately invoked function expression,
 // so no global variables are introduced.
 !function () {
-
-  // Require jQuery for the following
-  var $ = require('jquery');
 
   // Stores the cached partial HTML pages.
   // Keys correspond to fragment identifiers.
