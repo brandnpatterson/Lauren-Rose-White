@@ -2,7 +2,7 @@
  * Controls the opening and closing of Modals
  */
 
-var Modal = (function() {
+!function modal() {
 
   // cacheDOM
   var $document = $(document);
@@ -20,4 +20,4 @@ var Modal = (function() {
     var modalId = $($this).attr('data-click');
     $('#'+modalId).fadeIn();
   }
-})();
+}();

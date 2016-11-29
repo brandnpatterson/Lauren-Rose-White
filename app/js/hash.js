@@ -1,4 +1,3 @@
-var $ = require('jquery');
 // This script implements simple routing by loading partial HTML files
 // named corresponding to fragment identifiers.
 //
@@ -6,7 +5,7 @@ var $ = require('jquery');
 
 // Wrap everything in an immediately invoked function expression,
 // so no global variables are introduced.
-(function () {
+!function () {
 
   // Stores the cached partial HTML pages.
   // Keys correspond to fragment identifiers.
@@ -77,4 +76,4 @@ var $ = require('jquery');
 
   // Navigate whenever the fragment identifier value changes.
   $(window).bind('hashchange', navigate);
-}());
+}();

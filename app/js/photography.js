@@ -2,15 +2,15 @@
  * Controls the styling on click of the Sub-Navigation on the Photography View
  */
 
-var Photography = (function() {
+!function photography() {
 
   // cacheDOM
   var $document = $(document);
 
   // bind events
-  $document.on('click', '.nav-photo', photography);
+  $document.on('click', '.nav-photo', photoNavToggle);
 
-  function photography() { // Show clicked selection's respective data-click
+  function photoNavToggle() { // Show clicked selection's respective data-click
     var photoNav = $(this).attr('data-click');
     var photoNavSib = $(this).siblings().attr('data-click');
     $('#'+photoNav).show();
@@ -20,4 +20,4 @@ var Photography = (function() {
     $(this).addClass('underline');
     $(this).siblings().removeClass('underline');
   }
-})();
+}();

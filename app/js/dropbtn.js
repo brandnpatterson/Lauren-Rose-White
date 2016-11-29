@@ -2,9 +2,7 @@
  * Toggles from the DropBtn and the Responsive Menu
  */
 
-// global
-
-var DropBtn = (function() {
+!function dropBtn() {
 
   // cacheDOM
   var $content  = $('#content');
@@ -29,4 +27,4 @@ var DropBtn = (function() {
     $navRight.toggle().toggleClass('responsive'); // Created class for mobile nav
     this.classList.toggle('change');
   }
-})();
+}();
