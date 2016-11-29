@@ -24,8 +24,7 @@ var $ = require('jquery');
 
   // Open Modal depending on which data-click is clicked
   toggle.getModal = function() {
-    var $this = this;
-    var modalId = $($this).attr('data-click');
+    var modalId = $(this).attr('data-click');
     $('#'+modalId).fadeIn();
   }
 
