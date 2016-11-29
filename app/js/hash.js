@@ -7,6 +7,9 @@
 // so no global variables are introduced.
 !function () {
 
+  // Require jQuery for the following
+  var $ = require('jquery');
+
   // Stores the cached partial HTML pages.
   // Keys correspond to fragment identifiers.
   // Values are the text content of each loaded partial HTML file.
