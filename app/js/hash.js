@@ -17,7 +17,7 @@ var $ = require('jquery');
 
   // Gets the appropriate content for the given fragment identifier.
   // This function implements a simple cache.
-  function getContent(fragmentId, callback){
+  function getContent(fragmentId, callback) {
 
     // If the page has been fetched before,
     if(partialsCache[fragmentId]) {
@@ -38,21 +38,9 @@ var $ = require('jquery');
     }
   }
 
-  // Sets the 'active' class on the active navigation link.
-  function setActiveLink(fragmentId){
-    $('#navbar a').each(function (i, linkElement) {
-      var link = $(linkElement),
-        pageName = link.attr('href').substr(1);
-      if(pageName === fragmentId) {
-        link.attr('class', 'active');
-      } else {
-        link.removeAttr('class');
-      }
-    });
-  }
 
   // Updates dynamic content based on the fragment identifier.
-  function navigate(){
+  function navigate() {
 
     // Isolate the fragment identifier using substr.
     // This gets rid of the '#' character.
@@ -62,9 +50,6 @@ var $ = require('jquery');
     getContent(fragmentId, function (content) {
       $('#content').html(content);
     });
-
-    // Toggle the 'active' class on the link currently navigated to.
-    setActiveLink(fragmentId);
   }
 
   // If no fragment identifier is provided,
@@ -78,5 +63,5 @@ var $ = require('jquery');
   navigate();
 
   // Navigate whenever the fragment identifier value changes.
-  $(window).bind('hashchange', navigate);
+  $(window).on('hashchange', navigate);
 }();
