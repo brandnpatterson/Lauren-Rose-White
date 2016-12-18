@@ -4,7 +4,7 @@ module.exports = {
       "es6": true,
       "jquery": true
   },
-  "extends": "angular",
+  "extends": "eslint:recommended",
   "rules": {
       "indent": [
           "error",
