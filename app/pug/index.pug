@@ -3,44 +3,8 @@ html(lang='en-US')
   include vars.pug
   include head.pug
   body
-    nav
-      ul#nav-left
-        li
-          a(href='#home')
-            h2 LAUREN ROSE WHITE
-        li
-          a(href='#contact')
-            h2 CONTACT
-      ul#nav-right
-        li
-          a(href='#photography')
-            h2 PHOTOGRAPHY
-        li
-          a(href='#printmaking')
-            h2 PRINTMAKING
-        li
-          a(href='#videos')
-            h2 VIDEOS
-      #dropbtn
-        div.bar1
-        div.bar2
-        div.bar3
+    include nav.pug
 
     #content
 
-    footer
-      a(href='mailto:wbrchair13@gmail.com')
-        img.social(src='dist/images/email-logo.png', alt='email logo')
-      a(href='http://www.instagram.com/catladylaurenn')
-        img.social(src='dist/images/instagram-logo.png', alt='instagram logo')
-      a(href='http://www.twitter.com/catladylaurenn')
-        img.social(src='dist/images/twitter-logo.png', alt='twitter logo')
-      a(href='https://www.facebook.com/catladylaurenn')
-        img.social(src='dist/images/facebook-logo.png', alt='facebook logo')
-      a(href='http://brandnpatterson.net/')
-        p.copyright
-          | ©
-          script(type='text/javascript') document.write(new Date().getFullYear());
-          | &nbsp; Brandon Patterson. All Rights Reserved.
-
-    script(src='dist/js/index.min.js')
+    include footer.pug
