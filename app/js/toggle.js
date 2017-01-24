@@ -11,14 +11,15 @@ import $ from 'jquery';
       $document = $(document),
       $dropBtn  = $('#dropbtn'),
       $footer   = $('footer'),
-      $modal    = $('.modal'),
       $navLeft  = $('#nav-left'),
       $navRight = $('#nav-right'),
       // create new Object
       toggle    = {};
 
   // When .closebtn is clicked, close all modals
-  toggle.closeBtn = () => $modal.fadeOut();
+  toggle.closeBtn = function() {
+    $('.modal').fadeOut();
+  }
 
   // Open Modal depending on which data-click is clicked
   toggle.getModal = function() {
