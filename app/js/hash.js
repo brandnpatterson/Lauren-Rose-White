@@ -18,10 +18,12 @@ import $ from 'jquery';
       callback(partialsCache[fragmentId]);
     // else load the content paired with the fragmentId
     } else {
-      $content.load('dist/views/' + fragmentId + '.html', (content) => {
-        partialsCache[fragmentId] = content;
-        callback(content);
-      });
+      $content.load('dist/views/' + fragmentId + '.html', getPartial);
+    }
+
+    function getPartial(content) {
+      partialsCache[fragmentId] = content;
+      callback(content);
     }
   }
 
