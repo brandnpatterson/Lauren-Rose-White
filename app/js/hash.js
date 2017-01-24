@@ -19,10 +19,11 @@ var $ = require('jquery');
     // else load the content paired with the fragmentId
     } else {
       $content.load('dist/views/' + fragmentId + '.html', getPartial);
-      function getPartial(content) {
-        partialsCache[fragmentId] = content;
-        callback(content);
-      }
+    }
+
+    function getPartial(content) {
+      partialsCache[fragmentId] = content;
+      callback(content);
     }
   }
 
