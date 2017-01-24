@@ -13,22 +13,20 @@ import $ from 'jquery';
       $footer   = $('footer'),
       $navLeft  = $('#nav-left'),
       $navRight = $('#nav-right'),
-      // create new Object
-      toggle    = {};
 
   // When .closebtn is clicked, close all modals
-  toggle.closeBtn = function() {
+  closeBtn = function() {
     $('.modal').fadeOut();
   }
 
   // Open Modal depending on which data-click is clicked
-  toggle.getModal = function() {
+  getModal = function() {
     let modalId = $(this).attr('data-click');
     $('#'+modalId).fadeIn();
   }
 
   // Toggle showing photos of the divs one at a time
-  toggle.photoNav = function() {
+  photoNav = function() {
     let photoNav = $(this).attr('data-click'),
         photoNavSib = $(this).siblings().attr('data-click');
 
@@ -39,11 +37,11 @@ import $ from 'jquery';
   }
 
   // Click .responsive -- makes dropbtn click
-  toggle.responsiveClose = function() {
+  responsiveClose = function() {
     $dropBtn.click();
   }
 
-  toggle.responsive = function() {
+  responsive = function() {
     $content.toggle();
     $footer.toggle();
     $navLeft.toggle();
@@ -53,9 +51,9 @@ import $ from 'jquery';
   }
 
   // Events
-  $document.on('click', '.closebtn', toggle.closeBtn);
-  $document.on('click', '.get-modal', toggle.getModal);
-  $document.on('click', '.nav-photo', toggle.photoNav);
-  $document.on('click', '.responsive', toggle.responsiveClose);
+  $document.on('click', '.closebtn', closeBtn);
+  $document.on('click', '.get-modal', getModal);
+  $document.on('click', '.nav-photo', photoNav);
+  $document.on('click', '.responsive', responsiveClose);
   $dropBtn.click(toggle.responsive);
 }();
