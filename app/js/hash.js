@@ -2,14 +2,14 @@
  * Routing with AJAX using hashchange & href
 **/
 
-var $ = require('jquery');
+import $ from 'jquery';
 
 !function () {
 
   // cacheDOM
-  var $content      = $('#content');
-  var $window       = $(window);
-  var partialsCache = {};
+  let $content      = $('#content'),
+      $window       = $(window),
+      partialsCache = {};
 
   // Fetch the content paired with each fragmentId
   function getContent(fragmentId, callback) {
@@ -18,25 +18,19 @@ var $ = require('jquery');
       callback(partialsCache[fragmentId]);
     // else load the content paired with the fragmentId
     } else {
-      $content.load('dist/views/' + fragmentId + '.html', getPartial);
-    }
-
-    function getPartial(content) {
-      partialsCache[fragmentId] = content;
-      callback(content);
+      $content.load('dist/views/' + fragmentId + '.html', (content) => {
+        partialsCache[fragmentId] = content;
+        callback(content);
+      });
     }
   }
 
   function navigate() {
     // return fragmentId with the first character removed (#)
-    var fragmentId = location.hash.substr(1);
+    let fragmentId = location.hash.substr(1);
 
     // set the content div based on fragmentId
-    getContent(fragmentId, callback);
-
-    function callback(content) {
-      $content.html(content);
-    }
+    getContent(fragmentId, (content) => $content.html(content));
 
     // set a default of #home
     if(!location.hash) {

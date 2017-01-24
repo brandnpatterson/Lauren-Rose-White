@@ -2,5 +2,5 @@
  * JS Webpack Entry Point
  */
 
-require('./hash.js');
-require('./toggle.js');
+import './hash.js';
+import './toggle.js';
