@@ -8,6 +8,8 @@ import $ from 'jquery';
 
   /*  Dynamically used const declared without jQuery selection. Used with the DOM at bottom of page */
   const $closeBtn   = '.closebtn',
+        // $dropBtn is wrapped in a jQuery selector when used in functions
+        $dropBtn    = '#dropBtn',
         $getModal   = '.get-modal',
         $navPhoto   = '.nav-photo',
         $responsive = '.responsive';
@@ -15,7 +17,6 @@ import $ from 'jquery';
   // CacheDOM
   const $content  = $('#content'),
         $document = $(document),
-        $dropBtn  = $('#dropBtn'),
         $footer   = $('footer'),
         $navLeft  = $('#nav-left'),
         $navRight = $('#nav-right');
@@ -44,7 +45,7 @@ import $ from 'jquery';
 
   // Click .responsive -- makes dropbtn click
   const responsive = function() {
-    $dropBtn.click();
+    $($dropBtn).click();
   }
 
   const dropBtn = function() {
@@ -53,11 +54,8 @@ import $ from 'jquery';
     $navLeft.toggle();
     /* responsive class Created here for closing nav-right on mobile only */
     $navRight.toggle().toggleClass('responsive');
-    $dropBtn.toggleClass('dropBtnChange');
+    $($dropBtn).toggleClass('dropBtnChange');
   }
-
-  /* Explicitely not dynamic because it is on index.html */
-  $dropBtn.on('click', dropBtn);
 
   // Dynamic click lick event logic specified with $document
   function click(x, y) {
@@ -66,6 +64,7 @@ import $ from 'jquery';
 
   // Dynamic Click Events
   click($closeBtn, closeBtn);
+  click($dropBtn, dropBtn);
   click($getModal, getModal);
   click($navPhoto, navPhoto);
   click($responsive, responsive);
