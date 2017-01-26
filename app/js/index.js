@@ -3,4 +3,4 @@
  */
 
 import './hash.js';
-import './toggle.js';
+import './click-events.js';

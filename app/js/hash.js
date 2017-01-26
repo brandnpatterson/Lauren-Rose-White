@@ -7,9 +7,9 @@ import $ from 'jquery';
 !function () {
 
   // cacheDOM
-  let $content      = $('#content'),
-      $window       = $(window),
-      partialsCache = {};
+  const $content      = $('#content'),
+        $window       = $(window),
+        partialsCache = {};
 
   // Fetch the content paired with each fragmentId
   function getContent(fragmentId, callback) {
@@ -29,7 +29,7 @@ import $ from 'jquery';
 
   function navigate() {
     // return fragmentId with the first character removed (#)
-    let fragmentId = location.hash.substr(1);
+    const fragmentId = location.hash.substr(1);
 
     // set the content div based on fragmentId
     getContent(fragmentId, (content) => $content.html(content));

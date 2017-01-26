@@ -13,7 +13,7 @@
     "lint": "eslint app/js",
     "restart": "npm run watch:all",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
-    "server": "browser-sync start --server --files='index.html, style.css, dist/js/index.min.js' --no-notify --port 8888",
+    "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/index.min.js' --no-notify --port 8888",
     "start": "npm run clean && npm run build:js && npm run build:watch",
     "build:watch": "npm run build:all & npm run watch:all",
     "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:views server",
