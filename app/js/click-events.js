@@ -57,7 +57,7 @@ import $ from 'jquery';
     $($dropBtn).toggleClass('dropBtnChange');
   };
 
-  // Dynamic click lick event logic specified with $document
+  // Dynamic click event logic specified with $document
   function click(x, y) {
     $document.on('click', x, y);
   };
