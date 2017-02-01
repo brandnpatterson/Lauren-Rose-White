@@ -11,6 +11,8 @@ import $ from 'jquery';
         $window       = $(window),
         partialsCache = {};
 
+  location.hash = '#home';
+  
   // Fetch the content paired with each fragmentId
   function getContent(fragmentId, callback) {
     // if the fragmentId is already stored in partialsCache, callback the fragmentId
