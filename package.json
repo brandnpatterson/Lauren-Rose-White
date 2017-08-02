@@ -9,7 +9,7 @@
     "build:js": "NODE_ENV=production webpack",
     "build:pug": "pug app/pug/index.pug -o ./",
     "build:views": "pug app/pug/*.pug -o dist/views",
-    "clean": "rimraf index.html app/assets/views dist/css dist/js dist/views/*.html",
+    "clean": "rimraf index.html app/assets/views dist/css/style.css dist/js dist/views/*.html",
     "lint": "eslint app/js",
     "restart": "npm run watch:all",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
